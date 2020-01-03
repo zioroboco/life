@@ -8,22 +8,16 @@ const config: Configuration = {
   mode: "development",
   entry: "./frontend",
   resolve: {
-    alias: { "react-dom": "@hot-loader/react-dom" },
-    extensions: [".ts", ".tsx", ".js", ".json", ".wasm"],
+    extensions: [".ts", ".js", ".json", ".wasm"],
   },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.ts$/,
         use: {
           loader: "babel-loader",
           options: {
-            presets: [
-              "@babel/preset-env",
-              "@babel/preset-react",
-              "@babel/preset-typescript",
-            ],
-            plugins: ["react-hot-loader/babel"],
+            presets: ["@babel/preset-env", "@babel/preset-typescript"],
           },
         },
       },
