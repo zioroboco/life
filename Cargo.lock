@@ -46,6 +46,15 @@ version = "1.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
+name = "life"
+version = "0.0.0"
+dependencies = [
+ "console_error_panic_hook 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)",
+ "wasm-bindgen 0.2.58 (registry+https://github.com/rust-lang/crates.io-index)",
+ "web-sys 0.3.35 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
 name = "log"
 version = "0.4.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -65,15 +74,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "memchr 2.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "version_check 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
-name = "oxygen"
-version = "0.0.0"
-dependencies = [
- "console_error_panic_hook 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "wasm-bindgen 0.2.58 (registry+https://github.com/rust-lang/crates.io-index)",
- "web-sys 0.3.35 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
