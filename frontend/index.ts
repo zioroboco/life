@@ -4,7 +4,7 @@ import("../pkg")
   .then(engine =>
     render(
       html`
-        <div>${engine.message()}</div>
+        <div>${engine.message("buddy")}</div>
       `,
       document.body
     )

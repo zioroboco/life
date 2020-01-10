@@ -14,6 +14,12 @@ pub fn main() -> Result<(), JsValue> {
 }
 
 #[wasm_bindgen]
-pub fn message() -> JsValue {
+extern "C" {
+  fn alert(s: &str);
+}
+
+#[wasm_bindgen]
+pub fn message(name: &str) -> JsValue {
+  alert(&format!("Hey, {}!", name));
   JsValue::from_str(LIFE)
 }
