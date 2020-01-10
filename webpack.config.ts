@@ -1,4 +1,5 @@
 import * as HtmlWebpackPlugin from "html-webpack-plugin"
+import * as path from "path"
 import { Configuration } from "webpack"
 import { name as title } from "./package.json"
 
@@ -25,7 +26,10 @@ const config: Configuration = {
   },
   plugins: [
     new HtmlWebpackPlugin({ title }),
-    new WasmPackPlugin({ crateDirectory: __dirname }),
+    new WasmPackPlugin({
+      crateDirectory: __dirname,
+      watchDirectories: [path.resolve(__dirname, "engine")],
+    }),
   ],
 }
 
