@@ -1,5 +1,4 @@
-import { Universe } from "../pkg"
-import { app as render } from "./app"
+import { root as render } from "./root"
 
 import("../pkg")
   .then(engine => {
@@ -14,7 +13,7 @@ import("../pkg")
     requestAnimationFrame(renderLoop)
 
     if (module.hot) {
-      module.hot.accept("./app.ts", () => render(universe))
+      module.hot.accept("./root.ts", () => render(universe))
     }
   })
   .catch(console.error)
