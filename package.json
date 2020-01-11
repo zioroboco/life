@@ -4,6 +4,10 @@
   "engines": {
     "node": "12.14.1"
   },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions"
+  ],
   "scripts": {
     "start": "webpack-dev-server --hot",
     "lint": "tsc && tslint --project . && prettier --check '**/*'"
