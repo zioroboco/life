@@ -1,13 +1,20 @@
+import { Universe } from "../pkg"
 import { app as render } from "./app"
 
 import("../pkg")
   .then(engine => {
-    const state = {
-      message: engine.init(window.navigator.userAgent),
+    const universe = engine.Universe.new()
+
+    const renderLoop = () => {
+      render(universe)
+      universe.tick()
+      requestAnimationFrame(renderLoop)
     }
-    render(state)
+
+    requestAnimationFrame(renderLoop)
+
     if (module.hot) {
-      module.hot.accept("./app.ts", () => render(state))
+      module.hot.accept("./app.ts", () => render(universe))
     }
   })
   .catch(console.error)

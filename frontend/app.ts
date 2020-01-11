@@ -1,10 +1,10 @@
 import { html, render } from "lit-html"
-import { State } from "./types"
+import { Universe } from "../pkg"
 
-export const app = ({ message }: State) => {
+export const app = (universe: Universe) => {
   render(
     html`
-      <div>${message}</div>
+      <div>${universe.render()}</div>
     `,
     document.body
   )
