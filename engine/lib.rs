@@ -19,7 +19,7 @@ extern "C" {
 }
 
 #[wasm_bindgen]
-pub fn message(name: &str) -> JsValue {
-  alert(&format!("Hey, {}!", name));
+pub fn init(user_agent: &str) -> JsValue {
+  alert(&format!("{}: {}", LIFE, user_agent));
   JsValue::from_str(LIFE)
 }
