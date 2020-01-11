@@ -28,7 +28,7 @@ const config: Configuration = {
     new HtmlWebpackPlugin({ title }),
     new WasmPackPlugin({
       crateDirectory: __dirname,
-      watchDirectories: [path.resolve(__dirname, "engine")],
+      watchDirectories: ["engine"],
     }),
   ],
 }
